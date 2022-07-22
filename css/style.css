@@ -1,0 +1,317 @@
+:root {
+	--orange-color: #f18120;
+	--gray-color: #444444;
+	--bul-color: #c0c0c0; 
+	--sec-bg: #f9f9f9;
+}
+body {
+	font-family: "Work sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+.main-title {
+	line-height: 1.7;
+	max-width: 650px;
+	margin: auto;
+}
+.main-title p {
+	color: var(--gray-color);
+}
+.bullets {
+	top: 90%;
+	margin: 0;
+	padding: 0;
+}
+.bullets li {
+	width: 12px;
+	height: 12px;
+	border: 2px solid var(--bul-color);
+	border-radius: 50%;
+	cursor: pointer;
+}
+.bullets li.active {
+	background-color: var(--bul-color);
+}
+/* Start Navbar */
+.logo img {
+	max-width: 120px;
+}
+.navbar {
+	background-color: #fff;
+	box-shadow: 1px 1px 1px rgba(0 0 0 / 20%);
+	height: 70px;
+}
+.navbar .container .main-links,
+.navbar .container .main-links .navbar-nav {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	gap: 20px;
+}
+.nav-item .nav-link {
+	font-size: 14px;
+	color: var(--gray-color);
+	transition: .3s;
+}
+.nav-item .nav-link:hover {
+	color: var(--orange-color);
+}
+/* Start Navbar */
+/* Start Set the size of the div element that contains the map */
+.g-maps iframe {
+	width: 100%;
+	height: calc(100vh - 200px);
+}
+.g-maps .search {
+	transform: translate(-50%, -200%);
+}
+.g-maps form input {
+	border-radius: 100px;
+	padding: 10px;
+	width: 100%;
+}
+.g-maps form input {
+	border: 1px solid #CCC;
+}
+.g-maps form input:focus {
+	outline: none;
+}
+.g-maps form .btn-search {
+	transform: translate(-105%, -50%);
+	padding: 5px 20px;
+	font-size: 20px;
+	color: white;
+	background-color: var(--orange-color);
+	border-radius: 25px;
+	border: 1px solid #CCC;
+}
+/* End Set the size of the div element that contains the map */
+/* Start Time Section */
+.time {
+	padding: 50px 0;
+}
+/* End Time Section */
+/* Start Time Section */
+.time .container .box img {
+	width: 190px;
+}
+/* End Time Section */
+/* Start Partners Section */
+.partners .row img {
+	width: 200px;
+	height: 100px;
+}
+@media (max-width: 768px) {
+	.partners .row img {
+		width: 150px;
+	}
+}
+.partners .container {
+	max-width: 1000px;
+	border-bottom: 1px solid #CCC;
+}
+/* End Partners Section */
+/* Start Places Section */
+.places .container-fluid .row {
+	overflow: hidden;
+	margin-left: -140px;
+}
+.places .container-fluid .row a {
+	width: 280px;
+	height: 300px;
+	display: block;
+	background-size: cover;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.places .container-fluid .row a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0 0 0 / 20% );
+}
+.places .container-fluid .row a:nth-child(1) {
+	background-image: url(../imgs/place-1.jpg);
+}
+.places .container-fluid .row a:nth-child(2) {
+	background-image: url(../imgs/place-2.jpg);
+}
+.places .container-fluid .row a:nth-child(3) {
+	background-image: url(../imgs/place-3.jpg);
+}
+.places .container-fluid .row a:nth-child(4) {
+	background-image: url(../imgs/place-4.jpg);
+}
+.places .container-fluid .row a:nth-child(5) {
+	background-image: url(../imgs/place-5.jpg);
+}
+.places .container-fluid .row a:nth-child(6) {
+	background-image: url(../imgs/place-6.jpg);
+}
+.places .container-fluid .row a:nth-child(7) {
+	background-image: url(../imgs/place-7.jpg);
+}
+.places .container-fluid .row a .text {
+	transform: translate(-50%, 0);
+	color: white !important;
+}
+.places .container-fluid .row a .text p {
+	color: var(--bul-color);
+}
+.places .bullets {
+	top: 105%;
+	transform: translateX(-50%);
+}
+/* End Places Section */
+/* Start Community */
+.community {
+	padding: 100px 0;
+	background-color: var(--sec-bg);
+}
+.community .container {
+	cursor: grab;
+}
+.community .container .box {
+	height: 350px;
+	opacity: .4;
+}
+.community .container .box .info {
+	height: 280px;
+	padding: 10px;
+	font-size: 14px;
+	border-radius: 4px;
+	background-color: #CCC;
+	position: relative;
+}
+.community .container .box.active {
+	opacity: 1;
+}
+.community .container .box.active .info {
+	background-color: var(--orange-color);
+	color: white;
+}
+.community .container .box .info::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-30%);
+	width: 0;
+	height: 0;
+}
+.community .container .box.active .info::before {
+	border-color: var(--orange-color) transparent transparent transparent;
+	border-width: 10px;
+	border-style: solid;
+}
+.community .container .box img {
+	max-width: 50px;
+	bottom: 0;
+	transform: translateX(-50%);
+}
+.community .container .bullets {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: calc(100% + 40px);
+	left: 50%;
+	transform: translateX(-50%);
+}
+/* End Community */
+/* Start Features */
+.features .imgs-holder {
+	width: fit-content;
+}
+.features .imgs-holder img {
+	width: 200px;
+	height: 100px;
+}
+/* End Features */
+/* Start Catalog */
+.catalog .container .box svg {
+	color: var(--orange-color);
+}
+/* End Catalog */
+/* Start Parking Space */
+.parking {
+	height: 60vh;
+	padding: 100px;
+	color: white;
+	background-image: url(https://www.yallaparking.com/Content/img/slider-bg-02.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+.parking::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0 0 0 / 20% );
+}
+.parking .container {
+	position: relative;
+	z-index: 10;
+	max-width: 650px;
+	margin: auto;
+}
+.parking .container p {
+	max-width: 550px;
+}
+.parking .container button {
+	background-color: var(--orange-color);
+	color: white;
+	font-weight: 500;
+	font-size: 14px;
+	padding: .5rem 1.5rem;
+}
+/* End Parking Space */
+/* Start Footer */
+footer {
+	color: var(--gray-color);
+}
+footer .container {
+	border-bottom: 1px solid var(--bul-color);
+}
+footer .logo img {
+	max-width: 100px;
+}
+footer .left {
+	max-width: 300px;
+}
+footer .left p {
+	font-size: 14px;
+}
+footer .right .help-links a {
+	font-size: 14px;
+	text-decoration: none;
+	color: var(--gray-color);
+}
+footer .right .help-links a:hover {
+	color: var(--orange-color);
+}
+footer .contact {
+	max-width: 160px;
+	font-size: 13px;
+}
+footer .contact span {
+	color: var(--orange-color);
+}
+footer .bottom p {
+	font-size: 14px;
+}
+/* End Footer */
